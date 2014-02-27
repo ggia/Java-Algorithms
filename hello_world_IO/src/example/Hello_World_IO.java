@@ -2,12 +2,6 @@ package example;
 
 import java.util.Scanner;
 
-/**
- * @author      Georgios Giannopoulos <georgios.giannopoulos@gmail.com>
- * @version     1.0             
- * @since       2014-02-07          (the version of the package this class was first added to)
- */
-
 public class Hello_World_IO {
 
 	/**
