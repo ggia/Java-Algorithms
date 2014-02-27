@@ -1,42 +1,55 @@
 package ggia.data.structs;
 
 public class StackClient {
-
-	public static void main(String[] args) {
-		FixedCapacityStackOfStrings FixedCapacityStack = new FixedCapacityStackOfStrings(10);
+	
+	private static void testStack(StackOfStrings stack) {
 		String strpop = new String("");
 		// to be or not to - be - - that - - - is
-		FixedCapacityStack.push("to");
-		FixedCapacityStack.push("be");
-		FixedCapacityStack.push("or");
-		FixedCapacityStack.push("not");
+		stack.push("to");
+		stack.push("be");
+		stack.push("or");
+		stack.push("not");
 		
-		strpop = FixedCapacityStack.pop();
+		// αφαίρεσε το τελευταίο String (το not)
+		strpop = stack.pop();
 		System.out.println(strpop);
 		
-		FixedCapacityStack.push("be");
+		stack.push("be");
 		
-		strpop = FixedCapacityStack.pop();
+		// αφαίρεσε το τελευταίο String (το be)
+		strpop = stack.pop();
 		System.out.println(strpop);
 		
-		strpop = FixedCapacityStack.pop();
+		strpop = stack.pop();
 		System.out.println(strpop);
 		
-		FixedCapacityStack.push("that");
+		// αφαίρεσε το τελευταίο String (το or)
+		stack.push("that");
 		
-		strpop = FixedCapacityStack.pop();
+		// αφαίρεσε το τελευταίο String (το that)
+		strpop = stack.pop();
 		System.out.println(strpop);
 		
-		strpop = FixedCapacityStack.pop();
+		// αφαίρεσε το τελευταίο String (το be)
+		strpop = stack.pop();
 		System.out.println(strpop);
 		
-		strpop = FixedCapacityStack.pop();
+		// αφαίρεσε το τελευταίο String (το to)
+		strpop = stack.pop();
 		System.out.println(strpop);
 		
-		FixedCapacityStack.push("is");
+		stack.push("is");
+	}
+
+	public static void main(String[] args) {
 		
-		// Σωστή έξοδος
-		// not
+		// Πολυμορφισμός: χρήση stack interface class
+		StackOfStrings stack = new FixedCapacityStackOfStrings(10);
+		
+		testStack(stack);
+		
+		// Σωστή έξοδος (αν έχει υλοποιηθεί σωστά το stack)
+		// not 
 		// be
 		// or
 		// that
