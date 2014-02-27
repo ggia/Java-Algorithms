@@ -5,10 +5,15 @@ public class StackClient {
 	private static void testStack(StackOfStrings stack) {
 		String strpop = new String("");
 		// to be or not to - be - - that - - - is
+		
+		System.out.println(stack.size());
+		
 		stack.push("to");
 		stack.push("be");
 		stack.push("or");
 		stack.push("not");
+		
+		System.out.println(stack.size());
 		
 		// αφαίρεσε το τελευταίο String (το not)
 		strpop = stack.pop();

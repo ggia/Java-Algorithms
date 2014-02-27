@@ -31,7 +31,9 @@ public class LinkedStackOfStrings implements StackOfStrings {
 
 	@Override
 	public int size() {
-		int nr=0;
+		if (isEmpty())
+			return 0;
+		int nr=1;
 		Node i=first;
 		while (i.next!=null) {
 			i=i.next;
