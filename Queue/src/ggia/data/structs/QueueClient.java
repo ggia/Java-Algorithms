@@ -31,6 +31,14 @@ public class QueueClient {
 		QueueOfStrings queue= new LinkedQueueOfStrings();
 		
 		testQueue(queue);
+		
+		// έξοδος
+		// to
+		// be
+		// or 
+		// not
+		// to
+		// be
 	}
 
 }
