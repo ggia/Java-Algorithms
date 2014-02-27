@@ -46,9 +46,14 @@ public class StackClient {
 		// Πολυμορφισμός: χρήση stack interface class
 		StackOfStrings stack = new FixedCapacityStackOfStrings(10);
 		
+		System.out.println("FixedCapacityStackOfStrings");
 		testStack(stack);
 		
-		// Σωστή έξοδος (αν έχει υλοποιηθεί σωστά το stack)
+		System.out.println("LinkedStackOfStrings");
+		stack = new LinkedStackOfStrings();
+		testStack(stack);
+		
+		// Σωστή έξοδος κάθε φορά (αν έχει υλοποιηθεί σωστά το stack)
 		// not 
 		// be
 		// or
