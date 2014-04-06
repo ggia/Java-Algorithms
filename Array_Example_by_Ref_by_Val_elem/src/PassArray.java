@@ -1,29 +1,26 @@
+// Difference passing array as reference and passing an element of an array as value
 
 public class PassArray {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		int [] array = {1, 2, 3, 4, 5};
 		
 		System.out.println("Effects of passing reference to entire array: \n"+
 		               "The values of the original array are:");
 		
-		for (int value: array) 
-			System.out.printf("\t%d", value);
+		// original array
+		printArray(array);
 		
 		modifyArray(array);		// pass array reference
-		System.out.println("\n\nThe values of the modified array are:");
+		System.out.println("\nThe values of the modified array are:");
 		
 		// output modified array elements
-		for (int value: array)
-			System.out.printf("\t%d", value);
+		printArray(array);
 		
 		System.out.printf("\n\nEffects of passing array element value:\n"+
 		                  "array[3] before modifyElement: %d\n", array[3]);
 		
-		modifyElement(array[3]);	// attenmpt to modify array[3]
+		modifyElement(array[3]);	// attempt to modify array[3]
 		System.out.printf("array[3] after modifyElement: %d\n", array[3]);
 
 	}
@@ -39,6 +36,12 @@ public class PassArray {
 		
 	}
 	
-	
+	// print to system.out all the elements of the int[] array
+	private static void printArray(int[] array) {
+		for (int value: array) 
+			System.out.printf("\t%d", value);
+		System.out.println();
+		
+	}	
 
 }
