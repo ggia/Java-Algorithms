@@ -1,8 +1,7 @@
 package ggia.data.structs;
 
 class HighArrayDriver {
-public static void main(String[] args)
-   {
+public static void main(String[] args) {
    int maxSize = 100;            // array size
    HighArray arr;                // reference to array
    arr = new HighArray(maxSize); // create the array
@@ -32,4 +31,4 @@ public static void main(String[] args)
 
    arr.display();                // display items again
    }  // end main()
-}  // end class HighArrayDriver
+} 
