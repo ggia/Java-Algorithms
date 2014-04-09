@@ -24,7 +24,7 @@ public class ObjectCount {
 	}
 
 	// επιστροφή της μεταβλητής instance_count
-	public static int getInstance_count() {
+	public int getInstance_count() {
 		return instance_count;
 	}
 	
